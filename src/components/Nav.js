@@ -1,12 +1,14 @@
 import React from 'react';
 import './Nav.css';
 
+import { Link } from 'react-router-dom';
+
 const Nav = props => {
   return (
     <nav className="tabs">
-      <a href="#" className="active">Home</a>
-      <a href="#">Add a Card</a>
-      <a href="#">About</a>
+      <Link to="/" className="active">Home</Link>
+      <Link to="/add">Add a Card</Link>
+      <Link to="/about">About</Link>
     </nav>
   );
 }

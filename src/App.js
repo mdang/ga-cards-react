@@ -18,10 +18,9 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <Header />
-        <Nav />
-
         <Router>
           <div>
+            <Nav />
             <Route exact path="/" component={ Cards } />
             <Route path="/add" component={ AddCard } />
             <Route path="/about" component={ About } />
