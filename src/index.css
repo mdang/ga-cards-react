@@ -1,6 +1,17 @@
+/* global */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #eee;
   font-size: 16px;
+}
+
+p {
+  font-size: 1.7rem;
+  line-height: 170%;
+}
+
+section {
+  padding: 1.1em 1.7em;
 }
