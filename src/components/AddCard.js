@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './AddCard.css';
 
+import { withRouter } from 'react-router-dom';
+
 class AddCard extends Component {
   constructor(props) {
     super(props);
@@ -31,9 +33,12 @@ class AddCard extends Component {
       })
     }).then(response => {
       console.log('response', response);
+
       return response.json();
     }).then(card => {
       console.log('card added', card);
+      
+      this.props.history.push('/');
     }).catch(exception => {
       console.error(exception);
     })
@@ -70,4 +75,4 @@ class AddCard extends Component {
   }
 }
 
-export default AddCard;
+export default withRouter(AddCard);
