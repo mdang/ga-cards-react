@@ -18,7 +18,6 @@ class Cards extends Component {
         return response.json();
       })
       .then(cards => {
-        console.log('cards', cards);
         this.setState({
           cards
         })
@@ -36,7 +35,11 @@ class Cards extends Component {
     return (
       <section id="cards" className="container-fluid">
         <div className="row">
-          { cards }
+          {
+            (cards.length) ?
+              cards :
+              <p>Add some cards to get started</p>
+          }
         </div>
       </section>
     );

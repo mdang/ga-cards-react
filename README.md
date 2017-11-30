@@ -129,4 +129,6 @@ $ touch .env.production.local
 - Have both the form field and preview bound to the same state for live preview 
 - Add event handler to add question to the API 
 
+## Hide Cards Until Clicked
+
  
