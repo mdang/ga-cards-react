@@ -115,10 +115,6 @@ class Card extends Component {
 ## Set up `dotenv`
 
 ```
-$ npm install --save dotenv
-```
-
-```
 $ touch .env.local
 $ touch .env.production.local
 ```
