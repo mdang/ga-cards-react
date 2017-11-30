@@ -75,9 +75,58 @@ $ npm i react-router-dom --save
 // App.js
 import {
 	BrowserRouter as Router,
-	Route,
-	Link
+	Route
 } from 'react-router-dom';
 ```
 
+Fix the nav active class
 
+```js
+<NavLink activeClassName="active" exact to="/">Home</NavLink>
+<NavLink activeClassName="active" to="/add">Add a Card</NavLink>
+<NavLink activeClassName="active" to="/about">About</NavLink>
+```
+
+
+## Set up the Card Component to Use Props
+
+```js
+// Card.js
+class Card extends Component {
+  render() {
+    return (
+      <div className="col-sm-6 col-md-3 col-lg-3">
+        <div className="card">
+          <h4 className="card-title">{ this.props.question }</h4>
+          <h6>Cards Against Assembly</h6>
+        </div>
+      </div>
+    )
+  }
+}
+```
+
+## Set up Cards Component to Access the API 
+
+- Access the GET API at [https://ga-cards.herokuapp.com/cards](https://ga-cards.herokuapp.com/cards)
+- Have the `Cards` component output the results using `Card`
+- Assign a key
+
+## Set up `dotenv`
+
+```
+$ npm install --save dotenv
+```
+
+```
+$ touch .env.local
+$ touch .env.production.local
+```
+
+## Set up Add Card 
+
+- Set up state in `Card`
+- Have both the form field and preview bound to the same state for live preview 
+- Add event handler to add question to the API 
+
+ 

@@ -6,7 +6,7 @@ class Card extends Component {
     return (
       <div className="col-sm-6 col-md-3 col-lg-3">
         <div className="card">
-          <h4 className="card-title">I could not complete my assignment because ________</h4>
+          <h4 className="card-title">{ this.props.question }</h4>
           <h6>Cards Against Assembly</h6>
         </div>
       </div>
